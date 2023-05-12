@@ -11,27 +11,12 @@ const app = express()
 app.use(express.json())
 
 const options = {
-    host: 'localhost',
+    host: 'kalinovne.ru',
     port: 3306,
-    user: 'root',
-    password: '12345678',
-    database: 'testtest'
+    user: 'u1884314_root',
+    password: '12345678root',
+    database: 'u1884314_bbd'
 }
-
-// const sessionConnection = mysql.createConnection(options)
-
-// const sessionStore = new MySQLSession({
-//     expiration: 10800000,
-//     createDatabaseTable: true,
-//     schema: {
-//         tableName: 'sessiontbl',
-//         columnNames: {
-//             session_id: 'session_id',
-//             expires: 'expires',
-//             data: 'data'
-//         }
-//     }
-// }, sessionConnection)
 
 const sessionStore = new MySQLSession(options);
 
