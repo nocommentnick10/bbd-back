@@ -7,10 +7,10 @@ exports.signIn = async (req, res, next) => {
 
     const signInRes = await signInObj.auth()
 
-    if(signInRes){
-        req.session.isAuth = true
-        res.redirect('http://localhost:8082/?#/admin')
-    }
+    // if(signInRes){
+    //     req.session.isAuth = true
+    //     res.redirect('http://localhost:8082/?#/admin')
+    // }
 }
 
 // exports.addBid = async (req, res, next) => {
