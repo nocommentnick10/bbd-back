@@ -4,7 +4,7 @@ const session = require('express-session')
 const mysql = require('mysql2')
 const MySQLSession = require('express-mysql-session')(session)
 
-const PORT = process.env.PORT || 8080
+const PORT = 8080
 
 const app = express()
 
@@ -62,7 +62,7 @@ app.use('/itemsinfo', require('./routes/itemsInfoRoute'))
 app.use('/items', require('./routes/itemsRoute'))
 app.use('/bids', require('./routes/bidsRoute'))
 app.use('/bidnew', require('./routes/bidNewRoute'))
-app.use('/auth', require('./routes/signInRoute'))
+// app.use('/auth', require('./routes/signInRoute'))
 
 app.get('/', (req, res) => {
     res.send('Hello')
