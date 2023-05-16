@@ -1,8 +1,6 @@
 const express = require('express')
 require('dotenv').config()
-const session = require('express-session')
 const mysql = require('mysql2')
-const MySQLSession = require('express-mysql-session')(session)
 
 const PORT = 8080
 
